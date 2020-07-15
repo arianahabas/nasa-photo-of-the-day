@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState, useEffect }from "react";
+
 import "./App.css";
+//import axios
+import axios from 'axios'
+//import apod from apod.js
+import Picture from './components/Picture'
+
 
 function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
+        NASA Photo of the Day <span role="img" aria-label='go!'>🚀</span>!
       </p>
+    <Picture />
     </div>
   );
 }
