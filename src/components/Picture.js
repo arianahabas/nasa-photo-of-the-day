@@ -18,14 +18,15 @@ const kf = keyframes`
 `
 
 const Container = styled.div`
-   padding: 0 75px;
-   margin: 20px;
+   display:flex;
+   flex-direction:row;
    border: 3px solid #282c34;
-   transform: scale(0);
    animation: ${kf} 1s ease-in-out forwards;
-
+   margin: 20px;
+   
 h2{
     border: 5px solid #D96C06;
+    margin: 15px;
     color: white;
     background-color: #E01A4F;
     border-radius: 10px;
@@ -34,21 +35,18 @@ h2{
         color:#E01A4F;
     }
 }
-
-
 p {
     font-size: 1.3rem;
-    padding: 10px 40px;
+    padding: 0 50px;
     &:nth-of-type(2) {
-      color: #E01A4F;
+      color: white;
     }
 }
     
 img{
-    width: auto;
-    &:hover {
-      border: 10px solid white;
-    }
+    width: 50vh;
+    height: auto;
+    padding: 10px;
 }
 `   
 
@@ -81,9 +79,8 @@ export default function Picture (){
                 <h2>{title}</h2>
                 <p>{explanation}</p> 
                 <p>Date: {date}</p>
-                <img src={image} alt= '' ></img>
             </div>
-            
+            <img src={image} alt= '' ></img>
         </Container>
     )
 }
